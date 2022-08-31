@@ -15,3 +15,9 @@ ENV WORDPRESS_DB_HOST="localhost" \
 
 COPY docker_install.sh  /tmp
 
+ADD https://wordpress.org/latest.zip   /tmp
+
+EXPOSE 80
+
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"] 
+
