@@ -1,6 +1,14 @@
 # This is a docker file
 FROM centos:7
-RUN yum install telnet -y && \ 
-mkdir /tmp/photos && \
+
+RUN yum update -y && \
+    yum install telnet httpd -y  && \
+    mkdir /tmp/photos  && \
+    touch /tmp/files
+
 LABEL appname="webapplication"
-MAINTAINER Student name
+MAINTAINER Student Name
+
+ENV WORDPRESS_DB_HOST="localhost" \
+    WORDPRESS_USER="wordpress" \
+    WORDPRESS_DB="wordpress"
