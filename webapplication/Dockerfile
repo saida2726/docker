@@ -12,3 +12,6 @@ MAINTAINER Student Name
 ENV WORDPRESS_DB_HOST="localhost" \
     WORDPRESS_USER="wordpress" \
     WORDPRESS_DB="wordpress"
+
+COPY docker_install.sh  /tmp
+
