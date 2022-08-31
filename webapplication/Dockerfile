@@ -14,6 +14,7 @@ ENV WORDPRESS_DB_HOST="localhost" \
     WORDPRESS_DB="wordpress"
 
 COPY docker_install.sh  /tmp
+COPY index.html /var/www/html/
 
 ADD https://wordpress.org/latest.zip   /tmp
 
